@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-const uuidv1 = require('uuid/v1');
+
 
 const userSchema = new mongoose.Schema(
   {
@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    hashed_password: {
+    password: {
       type: String,
       required: true,
     },
